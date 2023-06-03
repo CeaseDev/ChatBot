@@ -1,0 +1,279 @@
+#helpdesk-popup-button {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  padding: 10px 20px;
+  background-color: #0a4f70;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+#helpdesk-popup {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 350px;
+  height: 55vh;
+  min-height: 450px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  /* overflow-y: scroll; */
+  z-index: 1000;
+  display: none;
+  #helpdesk-popup-header {
+    background-color: #0a4f70;
+    color: white;
+    font-size: 18px;
+    /* width: 200px; */
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    #helpdesk-popup-close-button {
+      float: right;
+      border:none;
+      background-color: transparent;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      height: 32px;
+      border-radius: 50%;
+    }
+    #helpdesk-popup-close-button:hover{
+      background-color: white;
+      transition: all 0.5s ease;
+      box-shadow: 1px 1px 25px red;
+    }
+
+  }
+
+  @keyframes popupAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  #bot_name{
+    margin-left: 2px;
+    /* text-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    2px 2px 20px white; */
+  }
+  
+  #helpdesk-popup {
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  
+  #helpdesk-popup.show {
+    animation-name: popupAnimation;
+  }
+
+  #helpdesk-popup-body{
+    height: calc(100% - 150px);
+    padding: 10px;
+    background-color: #e6f2ff;
+  }
+
+
+  #helpdesk-popup-footer {
+    /* border: 5px solid black; */
+    background-color: #0a4f70;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    /* border-bottom-left-radius: 5px; */
+    /* border-bottom-right-radius: 5px; */
+  }
+    #helpdesk-popup-input {
+      width: 100%;
+      /* padding: 10px; */
+      border-radius: 5px 5px 0 0;
+      box-sizing: border-box;
+      font-size: 14px;
+      border-radius: 1rem;
+    }
+
+    /* #helpdesk-popup-submit-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #000000;
+      color: #fff;
+      border: none;
+      border-radius: 0 0 5px 5px;
+      cursor: pointer;
+      font-size: 14px;
+    } */
+  }
+  
+  
+  #submit_button{
+    background-color: #0a4f70;
+    width: 80px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 5px;
+    border: 1px solid #0a4f70;
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  #submit_button:hover{
+    background-color: white;
+    color: #0a4f70;
+    transition: all 0.5s ease;
+  }
+
+  #clear_submit{
+    background-color: #0a4f70;
+    width: 100px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 5px;
+    border: 1px solid #0a4f70;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+
+  #clear_submit:hover{
+    background-color: white;
+    color: #0a4f70;
+    transition: all 0.5s ease;
+  }
+
+  .messages {
+    height: 100%;
+    overflow: auto;
+    .message {
+      display: flow-root;
+      width: 100%;
+      .bot-message {
+        background-color: #0a4f70;
+        color: white;
+        padding: 10px;
+        border-radius: 0px 25px 25px 25px;
+        -moz-border-radius: 0px 25px 25px 25px;
+        -webkit-border-radius: 0px 25px 25px 25px;
+        border: 0px solid #000000;
+        margin-bottom: 10px;
+        display: inline-block;
+        max-width: 80%;
+      }
+
+      .user-message {
+        border: 0.5px solid #333;
+        background-color: #fff;
+        font-size: 15px;
+        color: #333;
+        padding: 10px;
+        border-radius:  25px 0px 25px 25px ;
+        -moz-border-radius:25px 0px 25px 25px ;
+        -webkit-border-radius:25px 0px 25px 25px ;
+        margin-bottom: 10px;
+        margin-right: .2rem;
+        display: block;
+        max-width: 90%;
+        text-align: right;  
+        float: right;
+      }
+    }
+  }
+   
+  #input_field_div{
+   /* border: 1px solid black; */
+   background-color: #0a4f70;
+   height: 10%;
+   display: flex;
+   justify-content: center; 
+   padding-top: 8px;
+  }
+
+
+  #input_field{
+    width: 90%;
+    padding-left: 15px;
+    height: 55%;
+    border-radius: 8px;
+    background-color: #e6f2ff;
+  }
+
+  #submit_button_div{
+    /* border: 1px solid black; */
+    background-color: #0a4f70;
+    display: flex;
+    height: 40px;
+
+    justify-content: space-between;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+  }
+
+  #animation_container{
+    background-color: #e6f2ff;
+    padding-left: 5px;
+  }
+
+.type_anim{
+   height: 10px;
+   width: 10px;
+   display: inline-block;
+   margin: .2rem;
+   border-radius: 50%;
+   animation: scaling 2.5s ease-in-out infinite;
+}
+
+@keyframes scaling{
+  0%, 100%{
+    transform: scale(0.2);
+    background-color: #30FFb7;
+  }
+
+  40%{
+    transform: scale(1);
+    background-color: #07deff;
+  }
+
+  50%{
+    transform: scale(1);
+    background-color: #0761ff;
+  }
+}
+
+.type_anim:nth-child(0){
+  animation-delay: 0s;
+}
+
+.type_anim:nth-child(1){
+  animation-delay: 0.2s;
+}
+
+.type_anim:nth-child(2){
+  animation-delay: 0.4s;
+}
+
+.type_anim:nth-child(3){
+  animation-delay: 0.6s;
+}
+
+.type_anim:nth-child(4){
+  animation-delay: 0.8s;
+}
+
+.type_anim:nth-child(5){
+  animation-delay: 1s;
+}
